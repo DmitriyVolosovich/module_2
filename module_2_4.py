@@ -1,17 +1,21 @@
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 primes = []
 not_primes = []
-for i in range(numbers[1], len(numbers) + 1):
-    is_prime = True
-    for j in range(2, i):
-        if i % j == 0:
-            is_prime = False
-            break
-        else:
-            is_prime = True
-    if is_prime:
-        primes.append(i)
+for i in range(int(len(numbers))):
+    if (numbers[i]) < 2:
+        i += 1
     else:
-        not_primes.append(i)
+        is_prime = True
+        for j in range(2, numbers[i]):
+            if  numbers[i] % j == 0:
+                is_prime = False
+                break
+            else:
+                is_prime = True
+        if is_prime == True:
+            primes.append(numbers[i])
+        else:
+            not_primes.append(numbers[i])
+
 print('Primes: ', primes)
 print('Not Primes: ', not_primes)
