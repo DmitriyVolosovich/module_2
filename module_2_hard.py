@@ -10,7 +10,7 @@ i=1
 j=2
 pass_list = []
 password = ''
-while i < j and i + j < int(n):
+while i < j and i + j <= int(n):
     while (i + j) <= int(n):
         if int(n) % (i + j) == 0:
             pass_list.append(i)
